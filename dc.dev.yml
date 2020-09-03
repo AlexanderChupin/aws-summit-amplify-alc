@@ -1,0 +1,17 @@
+version: '2'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: df.dev
+    image: aws-summit-amplify:dev
+    container_name: aws-summit-amplify.dev.backend
+    environment:
+      NODE_ENV: "development"
+    volumes:
+      - ".:/home/aws-summit-amplify"
+    ports:
+      - "3100:3000"
+      - "9229:9229"
+#   entrypoint: ["npm", "run", "debug_inspect"]
+    entrypoint: ["npm", "run", "bare"]
