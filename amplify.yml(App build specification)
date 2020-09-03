@@ -14,8 +14,8 @@ frontend:
       commands:
         - npm run build
         - pwd
-        - mkdir dist
-        - ls -al
+        - mkdir /dist
+        - ls -al /
   artifacts:
     baseDirectory: dist
     files:
