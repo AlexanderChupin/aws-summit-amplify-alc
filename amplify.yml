@@ -17,7 +17,7 @@ frontend:
         - mkdir /dist
         - ls -al /
   artifacts:
-    baseDirectory: dist
+    baseDirectory: /dist
     files:
       - '**/*'
   cache:
