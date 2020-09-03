@@ -14,10 +14,10 @@ frontend:
       commands:
         - npm run build
         - pwd
+        - mkdir dist
         - ls -al
-        - find / -name dist
   artifacts:
-    baseDirectory: /app/dist
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
