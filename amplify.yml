@@ -14,9 +14,10 @@ frontend:
       commands:
         - npm run build
         - pwd
-        - ls -al ./public
+        - ls -al build
+        - ls -al public
   artifacts:
-    baseDirectory: public
+    baseDirectory: build
     files:
       - '**/*'
   cache:
