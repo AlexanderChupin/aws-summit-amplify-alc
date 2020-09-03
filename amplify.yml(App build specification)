@@ -5,24 +5,19 @@ backend:
       commands:
         - '# Execute Amplify CLI with the helper script'
         - amplifyPush --simple
-env:
-  variables:
-    BUILD_FOLDER: app
-    OUTPUT_FOLDER: dist
 frontend:
   phases:
     preBuild:
       commands:
-        - cd ${BUILD_FOLDER}
-        - mkdir ./${OUTPUT_FOLDER}
         - npm ci
     build:
       commands:
-        - pwd
-        - ls -al ${OUTPUT_FOLDER}
         - npm run build
+        - pwd
+        - ls -al
+        - find / -name dist
   artifacts:
-    baseDirectory: ${OUTPUT_FOLDER}/dist
+    baseDirectory: /app/dist
     files:
       - '**/*'
   cache:
