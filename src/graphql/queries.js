@@ -30,3 +30,28 @@ export const listNotes = /* GraphQL */ `
     }
   }
 `;
+export const searchNotes = /* GraphQL */ `
+  query SearchNotes(
+    $filter: SearchableNoteFilterInput
+    $sort: SearchableNoteSortInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    searchNotes(
+      filter: $filter
+      sort: $sort
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        note
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+      total
+    }
+  }
+`;
