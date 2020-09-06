@@ -14,4 +14,4 @@ services:
       - "3100:3000"
       - "9229:9229"
 #   entrypoint: ["npm", "run", "debug_inspect"]
-    entrypoint: ["npm", "run", "bare"]
+    entrypoint: ["tail", "-f"]
