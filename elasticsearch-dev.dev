@@ -1,0 +1,2 @@
+#ALC # 2020-09-23. Install Elasticsearch with Docker | Elasticsearch Reference [7.9] | Elastic https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.9.1
