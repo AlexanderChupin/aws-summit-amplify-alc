@@ -140,7 +140,7 @@ class App extends Component {
 
       const filter = {
         note: {
-          regexp: note.note
+          match: note
         }
       }
       result = await API.graphql(graphqlOperation(searchNotes, {filter : filter}));
