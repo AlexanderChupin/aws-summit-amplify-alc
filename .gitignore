@@ -11,7 +11,7 @@
 # testing
 /coverage
 
-# production
+# production.
 /build
 
 # misc
@@ -34,7 +34,7 @@ amplify/.config/local-*
 amplify/mock-data
 amplify/backend/amplify-meta.json
 amplify/backend/awscloudformation
-build/
+/dynamodb-stream-elasticsearch/build/
 dist/
 node_modules/
 aws-exports.js
