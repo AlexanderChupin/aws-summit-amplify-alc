@@ -1,5 +1,6 @@
+#set ($bodyParsed = $utils.parseJson($context.result.body))
 #set( $es_items = [] )
-#foreach( $entry in $context.result.hits.hits )
+#foreach( $entry in $bodyParsed.hits.hits )
   #if( !$foreach.hasNext )
     #set( $nextToken = $entry.sort.get(0) )
   #end

@@ -1,12 +1,14 @@
 # Steps for building this application with Amplify
 
-# 2020-09 ALC ElasticSearch resources
+# 2020-09 ALC ElasticSearch resources and useful links
 - [Install Elasticsearch with Docker \| Elasticsearch Reference \[7\.9\] \| Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
 - [Start searching \| Elasticsearch Reference \[7\.9\] \| Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-search.html)
 - [Elasticsearch Clients \| Elastic](https://www.elastic.co/guide/en/elasticsearch/client/index.html)
 - [matrus2/dynamodb\-stream\-elasticsearch: Missing blueprint for AWS Lambda\. Reads stream from AWS DynamoDB and writes it to ElasticSearch\.](https://github.com/matrus2/dynamodb-stream-elasticsearch)
 - [NodeJS Runtime Environment with AWS Lambda Layers \| by Anjan Biswas \| Medium](https://medium.com/@anjanava.biswas/nodejs-runtime-environment-with-aws-lambda-layers-f3914613e20e)
 
+# 2020-09-30 amplify useful links
+- [Reference \- Files and Folders \- Amplify Docs](https://docs.amplify.aws/cli/reference/files#amplify-metajson)
 
 1. Clone the repo
 2. Install amplify in your computer and configure it (https://docs.amplify.aws/start/getting-started/installation/q/integration/react)

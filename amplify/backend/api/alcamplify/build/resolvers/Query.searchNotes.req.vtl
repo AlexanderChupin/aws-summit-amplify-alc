@@ -1,4 +1,4 @@
-#set( $indexPath = "/note/doc/_search" )
+#set( $indexPath = "/note/_search" )
 #set( $nonKeywordFields = [] )
 #if( $util.isNullOrEmpty($context.args.sort) )
   #set( $sortDirection = "desc" )
@@ -14,9 +14,14 @@
 #end
 {
   "version": "2018-05-29",
-  "operation": "GET",
-  "path": "$indexPath",
+  "method": "GET",##instead of "operation" in elasticsearch resolver
+  "resourcePath": "$indexPath",##instead of "path" in elasticsearch resolver
   "params": {
+      "query":{},
+      "headers": {
+          "Authorization": "$ctx.request.headers.Authorization",##instead of missing headers section in elasticsearch resolver
+          "Content-Type" : "application/json; charset=UTF-8"##instead of missing headers section in elasticsearch resolver
+      },
       "body":     {
                 #if( $context.args.nextToken )"search_after": [$util.toJson($context.args.nextToken)], #end
                 "size": #if( $context.args.limit ) $context.args.limit #else 100 #end,
